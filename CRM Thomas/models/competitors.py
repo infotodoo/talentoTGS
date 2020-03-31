@@ -6,5 +6,5 @@ class Competitors(models.Model):
 
     name=fields.Char('Competidor')
     code=fields.Char('Code')
-    weaknesses_id=fields.Many2one('weaknesses','DEBILIDADES')
-    strengths_id=fields.Many2one('strengths','FORTALEZAS')
+    weaknesses_id=fields.Many2one('weaknesses','Debilidades')
+    strengths_id=fields.Many2one('strengths','Fortaleza')
