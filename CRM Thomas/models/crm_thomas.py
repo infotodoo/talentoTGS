@@ -59,4 +59,12 @@ class CrmThomas(models.Model):
     type_of_tender=fields.Selection(type_tenderm, string='Tipo de Licitación', required=True)
 
     #Grupo 7
-    
+    process_number=fields.Char('Número de proceso', required=True)
+    object_=fields.Char('Objeto', required=True)
+    budget=fields.Float('Presuouesto', widget='monetary', required=True)
+    opening_date=fields.Date('Fecha de apertura', required=True)
+    deadline=fields.Date('Fecha de cierre', required=True)
+
+    #Union temporal (etiqueta o pestaña nueva)
+    #Competidores
+    competitors_id==fields.Many2one('competitors','Competidor', required=True)
